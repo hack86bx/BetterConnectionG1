@@ -85,7 +85,7 @@ Si tout est bon, faites un `Pull Request` sur le dépôt original.
 
 ### N'envoyez pas votre pull request avant `16h30`
 
-Occupés vous ailleurs en attendant, n'aidez pas les autres stagiaires.
+Occupez-vous ailleurs en attendant, n'aidez pas les autres stagiaires.
 
 Des formateurs pourront vous aider si vous avez des questions.
 
