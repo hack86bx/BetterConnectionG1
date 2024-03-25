@@ -37,4 +37,4 @@ require_once "../config.php";
 
 // Appel de la vue
 
-include "../view/livreorView.php";
+include "../view/index.php";
