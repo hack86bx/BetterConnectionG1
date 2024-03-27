@@ -1,40 +1,19 @@
 <?php
-/*
- * Front Controller de la gestion du livre d'or
- */
 
-/*
- * Chargement des dépendances
- */
-// chargement de configuration
 require_once "../config.php";
-// chargement du modèle de la table livreor
 
-/*
- * Connexion à la base de données en utilisant PDO
- * Avec un try catch pour gérer les erreurs de connexion
- */
+require_once "../model/newsModel.php";
 
-/*
- * Si le formulaire a été soumis
- */
 
-    // on appelle la fonction d'insertion dans la DB (addLivreOr())
+    try{
+    $db = new PDO(DB_DRIVER.":host=".DB_HOST.";dbname=".DB_NAME.";port=".DB_PORT.";charset=".DB_CHARSET,DB_LOGIN,DB_PWD);
 
-    // si l'insertion a réussi
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
 
-    // on redirige vers la page actuelle
+        }catch(Exception $e){
+    die($e ->getMessage());
+    }
 
-    // sinon, on affiche un message d'erreur
+include "../view/homepage.php";
 
-/*
- * On récupère les messages du livre d'or
- */
-
-// on appelle la fonction de récupération de la DB (getAllLivreOr())
-
-// fermeture de la connexion
-
-// Appel de la vue
-
-include "../view/index.php";
+$db = null;

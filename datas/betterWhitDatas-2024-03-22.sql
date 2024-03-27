@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # on selectionne tous les champs de la table category
 select * from `category`;
  
@@ -31,18 +31,10 @@ select * from `category`;
  inner join `user`
  on `news`.`user_iduser`=`user`.`iduser`
 =======
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Hôte : 127.0.0.1:3306
--- Généré le : ven. 22 mars 2024 à 10:38
--- Version du serveur : 8.0.31
--- Version de PHP : 8.2.0
->>>>>>> d6d9a62b6ffe7c428830f1b5eadce4baef9704a5
 
 
-<<<<<<< HEAD
+
+
 # on selectionne les champs title date_created de la table news ainsi que le login et thename de la table user, uniquement lorsque une news a un utilisateur on recupere egalement les category.title et category.slug si la news a des categories on affiche la news si elle n a pas de categorie
 
 select n.`title`, n.`date_created`,
@@ -196,4 +188,4 @@ ALTER TABLE `news_has_category`
   ADD CONSTRAINT `fk_news_has_category_news` FOREIGN KEY (`news_idnews`) REFERENCES `news` (`idnews`) ON DELETE CASCADE;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
->>>>>>> d6d9a62b6ffe7c428830f1b5eadce4baef9704a5
+
