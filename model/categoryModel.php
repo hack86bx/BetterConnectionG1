@@ -1,5 +1,12 @@
 <?php
 
+
+/**
+ * getAllCategoriesBySlug
+ *
+ * @param  PDO $db
+ * @return array|string
+ */
 function getAllCategoriesBySlug(PDO $db): array|string
 {
     $sql = "SELECT title, slug FROM category ORDER BY slug ASC;";
@@ -16,5 +23,18 @@ function getAllCategoriesBySlug(PDO $db): array|string
 
     }catch(Exception $e){
         return $e->getMessage();
+    }
+}
+
+function getCategoriesBySlug(PDO $connect, string $slug): array|bool
+{
+    $sql = "SELECT `title`,`description`
+    FROM category
+    WHERE slug = ?";
+    $request = $connect->prepare($sql);
+
+    try{
+        $request->rowCount()==0) return false;
+        
     }
 }
